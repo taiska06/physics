@@ -1,3 +1,7 @@
 <resources>
-    <string name="app_name">physics</string>
+    <string name="app_name">Физика</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tema">Материал</string>
+    <string name="test">опрос</string>
 </resources>
