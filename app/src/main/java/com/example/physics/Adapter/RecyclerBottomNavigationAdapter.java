@@ -56,10 +56,10 @@ public class RecyclerBottomNavigationAdapter extends RecyclerView.Adapter<Recycl
         holder.txtTitle.setText(bottomNavigationModel.getTitle());
         if(clickedItem==position){
             holder.imgIcon.setImageResource(bottomNavigationModel.getClickedIcon());
-            holder.txtTitle.setTextColor(context.getResources().getColor(R.color.purple_700));
+            holder.txtTitle.setTextColor(context.getResources().getColor(R.color.white));
         }else {
             holder.imgIcon.setImageResource(bottomNavigationModel.getNormalIcon());
-            holder.txtTitle.setTextColor(context.getResources().getColor(R.color.teal_200));
+            holder.txtTitle.setTextColor(context.getResources().getColor(R.color.grey));
 
 
 
