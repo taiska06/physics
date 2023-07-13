@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginVertical="16dp"
+    android:layout_marginHorizontal="24dp"
+    >
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="32dp"
+        android:src="@drawable/ic_avatar"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avatar"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/hi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ПРИВЕТ!"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/avatar"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/email_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:hint="Email"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:layout_marginTop="35dp"/>
+        <EditText
+            android:id="@+id/password_edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/round"
+            android:gravity="center"
+            android:hint="Password"
+            android:textSize="18sp"
+            android:padding="16dp"
+            android:layout_marginTop="12dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login"
+            android:textSize="16sp"
+            android:backgroundTint="@color/palitra_1.4"
+            app:cornerRadius="10dp"
+            app:icon="@drawable/baseline_waving_hand_24"
+            android:layout_marginTop="12dp"
+            />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="24dp"
+            android:layout_height="64dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="10dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/avatar"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Don't have an account?"
+                android:textSize="16sp"
+                android:layout_marginTop="30dp"
+                />
+            <Button
+                android:id="@+id/create_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="create"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                app:cornerRadius="5dp"
+                android:backgroundTint="@color/palitra_1.4"
+                android:layout_marginTop="30dp"
+                android:gravity="center"/>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

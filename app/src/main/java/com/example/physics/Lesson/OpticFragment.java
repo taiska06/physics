@@ -5,12 +5,18 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.physics.R;
 
+import java.util.ArrayList;
 
-public class OpticFragment extends Fragment {
+
+public class OpticFragment extends Fragment  {
 
 
 
@@ -30,6 +36,7 @@ public class OpticFragment extends Fragment {
         super.onCreate(savedInstanceState);
 
 
+
     }
 
     @Override
@@ -38,4 +45,7 @@ public class OpticFragment extends Fragment {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_optic, container, false);
     }
+
+
+
 }

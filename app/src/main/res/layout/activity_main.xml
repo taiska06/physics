@@ -16,9 +16,9 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rcyBottomNavigation"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="60dp"
         android:overScrollMode="never"
-        android:background="@color/purple_500"/>
+        android:background="#a4c4cc"/>
 
 
 

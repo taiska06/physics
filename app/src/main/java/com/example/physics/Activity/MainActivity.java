@@ -29,7 +29,6 @@ public class MainActivity extends AppCompatActivity {
     private HomeFragment homeFragment;
     private LessonFragment lessonFragment;
     private PlanFragment planFragment;
-
     private Fragment activeFragment;
 
     private FragmentManager fragmentManager;
@@ -84,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         bottomNavigationModels=new ArrayList<>();
-        bottomNavigationModels.add(new BottomNavigationModel("Home",R.drawable.ic_catpopa22,R.drawable.ic_catpopa2));
+        bottomNavigationModels.add(new BottomNavigationModel("Home",R.drawable.ic_cat_house,R.drawable.ic_cat_house));
         bottomNavigationModels.add(new BottomNavigationModel("Lesson",R.drawable.ic_catread2,R.drawable.ic_catread));
         bottomNavigationModels.add(new BottomNavigationModel("Plan",R.drawable.ic_catwithpaper2,R.drawable.ic_catwithpaper));
     }

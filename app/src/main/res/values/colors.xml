@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="purple_200">#69D3E0</color>
-    <color name="purple_500">#4FB19A</color>
-    <color name="purple_700">#F3222C63</color>
+    <color name="purple_500">#04748c</color>
+    <color name="purple_700">#2c514f</color>
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
-    <color name="orange">#FF9800</color>
-    <color name="orange2">#AF6901</color>
+    <color name="white">#ECEBEB</color>
     <color name="grey">#5A5A5A</color>
+
+//палитра шары
+    <color name="palitra_1.1">#a4c4cc</color>
+    <color name="palitra_1.2">#5d959f</color>
+    <color name="palitra_1.3">#04a4b4</color>
+    <color name="palitra_1.4">#04748c</color>
+    <color name="palitra_1.5">#2c514f</color>
+    <color name="palitra_1.6">#f07f7d</color>
+
+
 
 
 </resources>
