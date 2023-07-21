@@ -5,16 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.physics.MyAdapter;
+import com.example.physics.Adapter.MyAdapterOptic;
 import com.example.physics.R;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import com.example.physics.WeatherItem;
 
 import java.util.ArrayList;
 
@@ -45,8 +41,8 @@ public class OpticFragment extends Fragment  {
     };
 
     private final String image_urls[] = {
-            "https://storage.cloud.google.com/artifactory-images/old_fashioned_ring.PNG",
-            "https://www.dovora.com/resources/weather-icons/showcase/modern_showcase/day_clear.png",
+            "https://yandex.ru/an/count/WXiejI_zOoVX2LdO0MqG09DTSYOQbKgbKga4mGHzFfSxUxRVkVDTNpjVl-FrXZjSPLCv-046UNLAVo55KasGEmmwZdxA5o1GMJpqjcnrjluC-AGgxalP2n5d-Qm0hRDSLe3MMIOhGEiiP2f0woJiKe3MIMWkGElCUN9RYZlp1V8eZ_t4SsTEGm2RRPND-PgG0WDa2tS33ZbTeHrIMwGX71cnc37ZUeCdnOiNCpXO6r5qMkosNL95RhmKU3mPSerDKf5oi_UKCEJafi3vVCFKGL4FqSQxBDi9hFBYaYW4wr2hOMyAmJhKQjXgfQnvlQ7j_T5mcoH9J6iw51avosK1R3605H6I1Me9XgpFKZNvkbBo9Qf8JvOUCsIoooqPNMQ74guOSZCFv647AN4X1KmtEm064wPsANgQUXIMx7rn04ssVZX5NVQ3AIn9yhyKbYJvNWfBadnkXKBmtn6G8lYr0-YT_Im2KWIPPfWkPfbertLTnzBc2KQkkh9qeuQhhJTwjmaJTAItE9trTOHS4hrvYUNB7joqQ3tPlpdvwl9ZseCDu27unVLV8YLuInxzbjPr_OeIl2MFNklD9lcAHFeiZ1GNBaa47YDpfLAfh7uRm6BJO-LtVA41JOK82CyL_10X0qSFhaBs2fpYeSLqGJDJ5wWqjmhdZZL2ZcSJm3c6RsqcQDn7JmD8CgtNnmiAanSV0U6Gt8dZCFKglPLW3G00~2?test-tag=29",
+            "https://yandex.ru/an/count/WXiejI_zOoVX2LdO0MqG09DTSYOQbKgbKga4mGHzFfSxUxRVkVDTNpjVl-FrXZjSPLCv-046UNLAVo55KasGEmmwZdxA5o1GMJpqjcnrjluC-AGgxalP2n5d-Qm0hRDSLe3MMIOhGEiiP2f0woJiKe3MIMWkGElCUN9RYZlp1V8eZ_t4SsTEGm2RRPND-PgG0WDa2tS33ZbTeHrIMwGX71cnc37ZUeCdnOiNCpXO6r5qMkosNL95RhmKU3mPSerDKf5oi_UKCEJafi3vVCFKGL4FqSQxBDi9hFBYaYW4wr2hOMyAmJhKQjXgfQnvlQ7j_T5mcoH9J6iw51avosK1R3605H6I1Me9XgpFKZNvkbBo9Qf8JvOUCsIoooqPNMQ74guOSZCFv647AN4X1KmtEm064wPsANgQUXIMx7rn04ssVZX5NVQ3AIn9yhyKbYJvNWfBadnkXKBmtn6G8lYr0-YT_Im2KWIPPfWkPfbertLTnzBc2KQkkh9qeuQhhJTwjmaJTAItE9trTOHS4hrvYUNB7joqQ3tPlpdvwl9ZseCDu27unVLV8YLuInxzbjPr_OeIl2MFNklD9lcAHFeiZ1GNBaa47YDpfLAfh7uRm6BJO-LtVA41JOK82CyL_10X0qSFhaBs2fpYeSLqGJDJ5wWqjmhdZZL2ZcSJm3c6RsqcQDn7JmD8CgtNnmiAanSV0U6Gt8dZCFKglPLW3G00~2?test-tag=29",
             "https://www.dovora.com/resources/weather-icons/showcase/modern_showcase/night_half_moon_partial_cloud.png",
             "https://www.dovora.com/resources/weather-icons/showcase/modern_showcase/night_half_moon_snow.png",
             "https://www.dovora.com/resources/weather-icons/showcase/modern_showcase/sleet.png",
@@ -90,9 +86,6 @@ public class OpticFragment extends Fragment  {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-
-
-
     }
 
 
@@ -131,7 +124,7 @@ public class OpticFragment extends Fragment  {
         RecyclerView recyclerView =  view.findViewById(R.id.recyclerView);
         RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getContext());
         recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setAdapter(new MyAdapter(generateData()));
+        recyclerView.setAdapter(new MyAdapterOptic(generateData()));
         return view;
     }
 

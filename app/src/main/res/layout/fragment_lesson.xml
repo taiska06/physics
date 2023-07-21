@@ -84,7 +84,7 @@
                 android:layout_width="180dp"
                 android:layout_height="140dp"
                 android:backgroundTint="@color/palitra_1.3"
-                android:text="Термодинамика"
+                android:text="Электродинамика"
                 android:textSize="12sp"
                 android:layout_weight="1"
                 app:cornerRadius="25dp" />
@@ -97,7 +97,7 @@
                 android:layout_width="180dp"
                 android:layout_height="140dp"
                 android:backgroundTint="#7BB6C1"
-                android:text="Электродинамика"
+                android:text="Термодинамика"
                 android:textSize="12sp"
                 android:layout_weight="1"
                 app:cornerRadius="25dp" />

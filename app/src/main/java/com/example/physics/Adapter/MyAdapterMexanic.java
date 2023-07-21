@@ -1,4 +1,4 @@
-package com.example.physics;
+package com.example.physics.Adapter;
 
 
 import android.view.LayoutInflater;
@@ -10,21 +10,21 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.physics.Lesson.OpticFragment;
+import com.example.physics.Lesson.MexanicFragment;
+import com.example.physics.Lesson.TermodinamicFragment;
+import com.example.physics.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 
-public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyRow> {
+public class MyAdapterMexanic extends RecyclerView.Adapter<MyAdapterMexanic.MyRow> {
 
-    private ArrayList<OpticFragment.WeatherItem> itemArrayList;
+    private ArrayList<MexanicFragment.WeatherItem> itemArrayListMexanic;
 
 
-
-    public MyAdapter(ArrayList<OpticFragment.WeatherItem> generateData) {
-        this.itemArrayList = generateData;
+    public MyAdapterMexanic(ArrayList<MexanicFragment.WeatherItem> generateData) {
+        this. itemArrayListMexanic = generateData;
     }
-
 
     @NonNull
     @Override
@@ -35,13 +35,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.MyRow> {
 
     @Override
     public void onBindViewHolder(@NonNull MyRow holder, int position) {
-        holder.tv.setText(itemArrayList.get(position).getName());
-        Picasso.get().load(itemArrayList.get(position).getUrl()).into(holder.imageView);
+        holder.tv.setText( itemArrayListMexanic.get(position).getName());
+        Picasso.get().load(  itemArrayListMexanic.get(position).getUrl()).into(holder.imageView);
     }
 
     @Override
     public int getItemCount() {
-        return itemArrayList.size();
+        return  itemArrayListMexanic.size();
     }
 
     class MyRow extends RecyclerView.ViewHolder {

@@ -1,4 +1,4 @@
-package com.example.physics;
+package com.example.physics.Model;
 
 public class WeatherItem {
     private String name;
