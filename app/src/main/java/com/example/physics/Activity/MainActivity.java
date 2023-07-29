@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         bottomNavigationModels=new ArrayList<>();
-        bottomNavigationModels.add(new BottomNavigationModel("Home",R.drawable.ic_cat_house,R.drawable.ic_cat_house));
+        bottomNavigationModels.add(new BottomNavigationModel("Home",R.drawable.ic_sleep_cat2,R.drawable.ic_sleep_cat));
         bottomNavigationModels.add(new BottomNavigationModel("Lesson",R.drawable.ic_catread2,R.drawable.ic_catread));
         bottomNavigationModels.add(new BottomNavigationModel("Plan",R.drawable.ic_catwithpaper2,R.drawable.ic_catwithpaper));
     }
