@@ -25,7 +25,7 @@
             android:id="@+id/hi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Здравствуйте!"
+            android:text="Забыли пароль?"
             android:gravity="center"
             android:textSize="18sp"
             android:textColor="@color/black"
@@ -38,9 +38,8 @@
         android:layout_below="@+id/avatar"
         android:orientation="vertical">
 
-
         <EditText
-            android:id="@+id/email_edit_text"
+            android:id="@+id/forgot_email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/round"
@@ -49,28 +48,16 @@
             android:textSize="18sp"
             android:padding="16dp"
             android:layout_marginTop="35dp"/>
-        <EditText
-            android:id="@+id/password_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/round"
-            android:inputType="textPassword"
-            android:gravity="center"
-            android:hint="Password"
-            android:textSize="18sp"
-            android:padding="16dp"
-            android:layout_marginTop="12dp"/>
 
         <com.google.android.material.button.MaterialButton
-            android:id="@+id/login_btn"
+            android:id="@+id/passworlddrecover_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
             android:textSize="16sp"
             android:backgroundTint="@color/palitra_1.4"
             app:cornerRadius="10dp"
-            app:icon="@drawable/baseline_waving_hand_24"
-            android:layout_marginTop="12dp"
+            android:layout_marginTop="50dp"
             />
 
         <ProgressBar
@@ -89,41 +76,15 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Don't have an account?"
+                android:text="Remember everything?"
                 android:textSize="16sp"
                 android:layout_marginTop="30dp"
                 />
             <TextView
-                android:id="@+id/create_btn"
+                android:id="@+id/forgotpassworld_toLogin_btn"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Сreate"
-                android:textStyle="bold"
-                android:textSize="16sp"
-                android:backgroundTint="@color/palitra_1.4"
-                android:layout_marginTop="30dp"
-                android:gravity="center"/>
-
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/avatar"
-            android:orientation="horizontal">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Forgot password?"
-                android:textSize="16sp"
-                android:layout_marginTop="30dp"
-                />
-            <TextView
-                android:id="@+id/forgot_btn"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Help"
+                android:text="Login"
                 android:textStyle="bold"
                 android:textSize="16sp"
                 android:backgroundTint="@color/palitra_1.4"
@@ -135,3 +96,7 @@
 
     </LinearLayout>
 </RelativeLayout>
+
+
+
+

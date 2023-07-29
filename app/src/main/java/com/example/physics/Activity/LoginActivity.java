@@ -22,7 +22,7 @@ import com.google.firebase.auth.FirebaseAuth;
 public class LoginActivity extends AppCompatActivity {
     EditText emailEditText, passwordEditText;
     Button loginBtn;
-    TextView createBtn;
+    TextView createBtn,forgot_btn;
     ProgressBar progressBar;
 
 
@@ -36,11 +36,20 @@ public class LoginActivity extends AppCompatActivity {
         progressBar=findViewById(R.id.progressBar);
         loginBtn=findViewById(R.id.login_btn);
         createBtn=findViewById(R.id.create_btn);
+        forgot_btn=findViewById(R.id.forgot_btn);
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 loginUser();
+            }
+        });
+        forgot_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginActivity.this, ForgotPasswordActivity.class));
+                finish();
+
             }
         });
         createBtn.setOnClickListener(new View.OnClickListener() {
