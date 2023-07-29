@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -16,11 +17,15 @@ import com.example.physics.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 import java.util.Objects;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class CteateAccauntActivity extends AppCompatActivity {
 
     EditText emailEditText, passwordEditText , confirmPasswordEditText;
-    Button createAccountBtn, loginBtn;
+    Button createAccountBtn;
+
+    TextView  loginBtn;
     ProgressBar progressBar;
 
 
@@ -101,7 +106,10 @@ public class CteateAccauntActivity extends AppCompatActivity {
 
 
     boolean validateData(String email,String password,String confirmPassword){
-
+        Pattern pattern = Pattern.compile("[a-zA-Z]+");
+        Pattern pattern2 = Pattern.compile("\\d+");
+        Matcher matcher = pattern.matcher(password);
+        Matcher matcher2 = pattern2.matcher(password);
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
             emailEditText.setError("Email is invalid");
             return false;
@@ -114,6 +122,14 @@ public class CteateAccauntActivity extends AppCompatActivity {
             confirmPasswordEditText.setError("Password not matched");
             return false;
 
+        }
+        if (!matcher.find()) {
+            confirmPasswordEditText.setError("The password must contain at least one letter");
+            return false;
+        }
+        if (!matcher2.find()) {
+            confirmPasswordEditText.setError("The password must contain at least one digit");
+            return false;
         }
         return true;
     }
