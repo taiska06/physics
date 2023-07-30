@@ -30,6 +30,16 @@
             android:textSize="18sp"
             android:textColor="@color/black"
             android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/hi2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Мы отправим письмо на почту!"
+            android:gravity="center"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:textStyle="normal"/>
     </LinearLayout>
 
     <LinearLayout
@@ -47,17 +57,17 @@
             android:hint="Email"
             android:textSize="18sp"
             android:padding="16dp"
-            android:layout_marginTop="35dp"/>
+            android:layout_marginTop="60dp"/>
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/passworlddrecover_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="SEND"
             android:textSize="16sp"
             android:backgroundTint="@color/palitra_1.4"
             app:cornerRadius="10dp"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="10dp"
             />
 
         <ProgressBar

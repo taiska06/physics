@@ -20,6 +20,10 @@ import com.example.physics.Lesson.MexanicFragment;
 import com.example.physics.Lesson.OpticFragment;
 import com.example.physics.Lesson.TermodinamicFragment;
 import com.example.physics.R;
+import com.example.physics.Test.TestElectrodinamicFragment;
+import com.example.physics.Test.TestMexanicFragment;
+import com.example.physics.Test.TestOpticFragment;
+import com.example.physics.Test.TestTermodinamicFragment;
 
 
 public class LessonFragment extends Fragment {
@@ -92,33 +96,22 @@ public class LessonFragment extends Fragment {
     private void showOptic(){
         ConstraintLayout contlay = requireView().findViewById(R.id.contlayoptic);
         View view= LayoutInflater.from(getContext()).inflate(R.layout.dialog_optic,contlay);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button temaoptic = view.findViewById(R.id.temaoptic);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button tema_optic = view.findViewById(R.id.temaoptic);
+        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button test_optic = view.findViewById(R.id.test_optic);
         AlertDialog.Builder builder= new AlertDialog.Builder(requireContext());
         builder.setView(view);
         final AlertDialog alertDialog =builder.create();
-        temaoptic.findViewById(R.id.temaoptic).setOnClickListener(new View.OnClickListener() {
+        tema_optic.findViewById(R.id.temaoptic).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openOpticFragment();
                 alertDialog.dismiss();
             }
         });
-        if (alertDialog.getWindow() != null){
-            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
-        }
-        alertDialog.show();
-    }
-    private void showMexanic(){
-        ConstraintLayout contlay = requireView().findViewById(R.id.contlaymexanic);
-        View view= LayoutInflater.from(getContext()).inflate(R.layout.dialog_mexanic,contlay);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button temamexanic = view.findViewById(R.id.tema_mexanic);
-        AlertDialog.Builder builder= new AlertDialog.Builder(requireContext());
-        builder.setView(view);
-        final AlertDialog alertDialog =builder.create();
-        temamexanic.findViewById(R.id.tema_mexanic).setOnClickListener(new View.OnClickListener() {
+        test_optic.findViewById(R.id.test_optic).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openMexanicFragment();
+                openTestOpticFragment();
                 alertDialog.dismiss();
             }
         });
@@ -127,17 +120,56 @@ public class LessonFragment extends Fragment {
         }
         alertDialog.show();
     }
-    private void showElectrodinamic(){
-        ConstraintLayout contlay = requireView().findViewById(R.id.contlayelectrodinamic);
-        View view= LayoutInflater.from(getContext()).inflate(R.layout.dialog_electrodinamic,contlay);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button temaelectrodinamic = view.findViewById(R.id.tema_electrodinamic);
+
+    private void showMexanic(){
+        ConstraintLayout contlay = requireView().findViewById(R.id.contlaymexanic);
+        View view= LayoutInflater.from(getContext()).inflate(R.layout.dialog_mexanic,contlay);
+        Button tema_mexanic = view.findViewById(R.id.tema_mexanic);
+        Button test_mexanic=view.findViewById(R.id.test_mexanic);
         AlertDialog.Builder builder= new AlertDialog.Builder(requireContext());
         builder.setView(view);
         final AlertDialog alertDialog =builder.create();
-        temaelectrodinamic.findViewById(R.id.tema_electrodinamic).setOnClickListener(new View.OnClickListener() {
+        tema_mexanic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openMexanicFragment();
+                alertDialog.dismiss();
+            }
+        });
+        test_mexanic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTestMexanicFragment();
+                alertDialog.dismiss();
+            }
+        });
+        if (alertDialog.getWindow() != null){
+            alertDialog.getWindow().setBackgroundDrawable(new ColorDrawable(0));
+        }
+        alertDialog.show();
+    }
+
+    private void showElectrodinamic(){
+        ConstraintLayout contlay = requireView().findViewById(R.id.contlayelectrodinamic);
+        View view= LayoutInflater.from(getContext()).inflate(R.layout.dialog_electrodinamic,contlay);
+
+        Button tema_electrodinamic = view.findViewById(R.id.tema_electrodinamic);
+        Button test_electrodinamic = view.findViewById(R.id.test_electrodinamic);
+
+        AlertDialog.Builder builder= new AlertDialog.Builder(requireContext());
+        builder.setView(view);
+        final AlertDialog alertDialog =builder.create();
+        tema_electrodinamic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openElectrodinamicFragment();
+                alertDialog.dismiss();
+            }
+        });
+        test_electrodinamic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTestElectrodinamicFragment();
                 alertDialog.dismiss();
             }
         });
@@ -149,14 +181,23 @@ public class LessonFragment extends Fragment {
     private void showTermodinamic(){
         ConstraintLayout contlay = requireView().findViewById(R.id.contlaytermodinamic);
         View view= LayoutInflater.from(getContext()).inflate(R.layout.dialog_termodinamic,contlay);
-        @SuppressLint({"MissingInflatedId", "LocalSuppress"}) Button tematermodinamic = view.findViewById(R.id.tema_termodinamic);
+        Button tema_termodinamic = view.findViewById(R.id.tema_termodinamic);
+        Button test_termodinamic = view.findViewById(R.id.test_termodinamic);
+
         AlertDialog.Builder builder= new AlertDialog.Builder(requireContext());
         builder.setView(view);
         final AlertDialog alertDialog =builder.create();
-        tematermodinamic.findViewById(R.id.tema_termodinamic).setOnClickListener(new View.OnClickListener() {
+        tema_termodinamic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openTermodinamicFragment();
+                alertDialog.dismiss();
+            }
+        });
+        test_termodinamic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTestTermodinamicFragment();
                 alertDialog.dismiss();
             }
         });
@@ -187,5 +228,24 @@ public class LessonFragment extends Fragment {
         ((MainActivity)requireActivity()).pushFragmentToStack(MainActivity.BACK_STACK_LESSON,electrodinamicFragment);
         requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerLesson,electrodinamicFragment).commit();
     }
-
+    private void openTestOpticFragment(){
+        TestOpticFragment testOpticFragment= TestOpticFragment.newInstance();
+        ((MainActivity)requireActivity()).pushFragmentToStack(MainActivity.BACK_STACK_LESSON, testOpticFragment);
+        requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerLesson, testOpticFragment).commit();
+    }
+    private void openTestMexanicFragment(){
+        TestMexanicFragment testMexanicFragment = TestMexanicFragment.newInstance();
+        ((MainActivity)requireActivity()).pushFragmentToStack(MainActivity.BACK_STACK_LESSON, testMexanicFragment);
+        requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerLesson, testMexanicFragment).commit();
+    }
+    private void openTestElectrodinamicFragment(){
+       TestElectrodinamicFragment testElectrodinamicFragment = TestElectrodinamicFragment.newInstance();
+        ((MainActivity)requireActivity()).pushFragmentToStack(MainActivity.BACK_STACK_LESSON, testElectrodinamicFragment);
+        requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerLesson, testElectrodinamicFragment).commit();
+    }
+    private void openTestTermodinamicFragment(){
+        TestTermodinamicFragment testTermodinamicFragment=TestTermodinamicFragment.newInstance();
+        ((MainActivity)requireActivity()).pushFragmentToStack(MainActivity.BACK_STACK_LESSON,testTermodinamicFragment);
+        requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerLesson, testTermodinamicFragment).commit();
+    }
 }
