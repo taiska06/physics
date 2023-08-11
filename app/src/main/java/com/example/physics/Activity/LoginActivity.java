@@ -13,6 +13,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.physics.Fragment.HomeFragment;
 import com.example.physics.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -37,6 +38,7 @@ public class LoginActivity extends AppCompatActivity {
         loginBtn=findViewById(R.id.login_btn);
         createBtn=findViewById(R.id.create_btn);
         forgot_btn=findViewById(R.id.forgot_btn);
+
 
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -123,4 +125,6 @@ public class LoginActivity extends AppCompatActivity {
         }
         return true;
     }
+
+
 }

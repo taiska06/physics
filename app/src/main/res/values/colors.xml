@@ -3,7 +3,7 @@
     <color name="purple_200">#69D3E0</color>
     <color name="purple_500">#04748c</color>
     <color name="purple_700">#2c514f</color>
-    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_200">#bccccb</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#ECEBEB</color>
@@ -16,6 +16,17 @@
     <color name="palitra_1.4">#04748c</color>
     <color name="palitra_1.5">#2c514f</color>
     <color name="palitra_1.6">#f07f7d</color>
+
+//палитра для note
+    <color name="palitra_1.7">#ecc448</color>
+    <color name="palitra_1.8">#d69c64</color>
+    <color name="palitra_1.9">#c7c1b8</color>
+    <color name="palitra_1.10">#a0ced8</color>
+    <color name="palitra_1.11">#d1d3e1</color>
+    <color name="palitra_1.12">#eecd8a</color>
+    <color name="palitra_1.13">#bccccb</color>
+    <color name="palitra_1.14">#B7D874</color>
+
 
 
 

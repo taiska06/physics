@@ -14,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.PopupMenu;
+import android.widget.TextView;
 
 import com.example.physics.Activity.LoginActivity;
 import com.example.physics.Activity.MainActivity;
@@ -67,6 +68,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         
-        return inflater.inflate(R.layout.fragment_home, container, false);
+       View view= inflater.inflate(R.layout.fragment_home, container, false);
+        return view;
     }
 }
