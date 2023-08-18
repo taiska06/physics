@@ -57,7 +57,6 @@ public class HomeFragment extends Fragment {
 
                     }
                });
-
             }
       private  void closeFragment(){
         getActivity().getFragmentManager().popBackStack();

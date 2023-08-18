@@ -1,5 +1,6 @@
 package com.example.physics.Fragment;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageButton;
 import android.widget.PopupMenu;
 import android.widget.Toast;
 
@@ -33,23 +33,16 @@ import java.util.List;
 
 
 public class PlanFragment extends Fragment implements  PopupMenu.OnMenuItemClickListener {
-
     RecyclerView recyclerView;
     NotesListAdapter notesListAdapter;
     List<Notes> notes = new ArrayList<>();
     RoomDB database;
     FloatingActionButton fab_add;
-
     SearchView searchView_home;
     Notes selectedNote;
 
-    ImageButton back;
-
-
-
-
     public PlanFragment() {
-        // Required empty public constructor
+
     }
 
 
@@ -67,7 +60,6 @@ public class PlanFragment extends Fragment implements  PopupMenu.OnMenuItemClick
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_plan, container, false);
     }
 
@@ -77,11 +69,7 @@ public class PlanFragment extends Fragment implements  PopupMenu.OnMenuItemClick
         recyclerView=view.findViewById(R.id.recycler_home);
         fab_add=view.findViewById(R.id.fab_add);
         searchView_home=view.findViewById(R.id.searchView_home);
-
-
-
         database=RoomDB.getInstance(getContext());
-
         notes=database.mainDAO().getAll();
         updateRecycler(notes);
 
@@ -90,7 +78,6 @@ public class PlanFragment extends Fragment implements  PopupMenu.OnMenuItemClick
             public void onClick(View v) {
                 Intent intent= new Intent(getContext(), NotesTakerActivity.class);
                 startActivityForResult(intent,101);
-
             }
         });
         searchView_home.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
@@ -105,7 +92,6 @@ public class PlanFragment extends Fragment implements  PopupMenu.OnMenuItemClick
                 return true;
             }
         });
-
     }
 
     private void filter(String newText) {
@@ -115,12 +101,11 @@ public class PlanFragment extends Fragment implements  PopupMenu.OnMenuItemClick
                     || singleNote.getNotes().toLowerCase().contains(newText.toLowerCase())){
                 filteredList.add(singleNote);
             }
-
         }
         notesListAdapter.filterList(filteredList);
-
     }
 
+    @SuppressLint("NotifyDataSetChanged")
     @Override
     public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -144,7 +129,6 @@ public class PlanFragment extends Fragment implements  PopupMenu.OnMenuItemClick
                 notes.addAll(database.mainDAO().getAll());
                 notesListAdapter.notifyDataSetChanged();
             }
-
         }
     }
 
@@ -182,6 +166,7 @@ public class PlanFragment extends Fragment implements  PopupMenu.OnMenuItemClick
 
     }
 
+    @SuppressLint({"NotifyDataSetChanged", "NonConstantResourceId"})
     @Override
     public boolean onMenuItemClick(MenuItem item) {
         switch (item.getItemId()){
@@ -208,8 +193,7 @@ public class PlanFragment extends Fragment implements  PopupMenu.OnMenuItemClick
         }
         return false;
     }
-
-    }
+}
 
 
 
