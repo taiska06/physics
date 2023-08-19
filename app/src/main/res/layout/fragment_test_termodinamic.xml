@@ -1,15 +1,83 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Test.TestOpticFragment"
-    android:background="@color/palitra_1.2">
-
-    <!-- TODO: Update blank fragment layout -->
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="24dp"
+    android:background="@drawable/gradient">
     <TextView
+        android:id="@+id/total_questiontermodinamic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="кол."
+        android:textSize="16sp" />
+    <TextView
+        android:id="@+id/question"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_above="@id/choices_layout"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="50dp"
+        android:text="will be the question"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/choices_layout"
+        android:layout_centerInParent="true"
+        android:orientation="vertical">
+
+        <Button
+
+            android:id="@+id/ans_A"
+            android:text="ans_a"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:gravity="left|center_vertical"
+            android:textSize="12sp"
+            app:cornerRadius="40dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ans_B"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white"
+            android:text="ans_b"
+            android:textColor="@color/black"
+            android:gravity="left|center_vertical"
+            android:textSize="12sp"
+            app:cornerRadius="40dp"/>
+        <Button
+            android:id="@+id/ans_C"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:backgroundTint="@color/white"
+            android:textColor="@color/black"
+            android:gravity="left|center_vertical"
+            android:textSize="12sp"
+            app:cornerRadius="40dp"
+            android:text="ans_c"
+            />
+    </LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/submit_btn"
+        android:text="Ответить"
+        android:layout_below="@id/choices_layout"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="@color/palitra_1.6"
+        app:cornerRadius="15dp"/>
+</RelativeLayout>

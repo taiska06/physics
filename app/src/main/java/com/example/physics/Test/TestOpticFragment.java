@@ -1,13 +1,13 @@
 package com.example.physics.Test;
 
-import android.annotation.SuppressLint;
+
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,10 +15,9 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.physics.Activity.LoginActivity;
-import com.example.physics.Fragment.LessonFragment;
-import com.example.physics.Lesson.OpticFragment;
-import com.example.physics.QuestionAnswerOptic;
+
+import com.example.physics.Activity.MainActivity;
+import com.example.physics.Answer.QuestionAnswerOptic;
 import com.example.physics.R;
 
 
@@ -41,9 +40,7 @@ public class TestOpticFragment extends Fragment  implements View.OnClickListener
 
 
     public static TestOpticFragment newInstance() {
-        TestOpticFragment fragment = new TestOpticFragment();
-
-        return fragment;
+        return new TestOpticFragment();
     }
 
     @Override
@@ -68,7 +65,7 @@ public class TestOpticFragment extends Fragment  implements View.OnClickListener
 
         }else{
             selectedAnswer  = clickedButton.getText().toString();
-            clickedButton.setBackgroundColor(Color.rgb(0,204,153));
+            clickedButton.setBackgroundColor(Color.rgb(234,137,154));
 
         }
 
@@ -79,19 +76,27 @@ public class TestOpticFragment extends Fragment  implements View.OnClickListener
     void finishQuiz(){
         String passStatus = "";
         if(score > totalQuestion_optic*0.60){
-            passStatus = "Молодец";
+            passStatus = "Так держать!";
         }else{
-            passStatus = "Ты пытался";
+            passStatus = "Попробуй еще";
         }
 
-        new AlertDialog.Builder(getContext())
-                .setTitle(passStatus)
-                .setMessage("Количество правильных "+ score+" из "+ totalQuestion_optic)
-                .setPositiveButton("Перезапустить",(dialogInterface, i) -> restartQuiz() )
-                .setCancelable(false)
-                .show();
-
-
+        AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
+        builder.setTitle(passStatus);
+        builder.setMessage("Количество правильных "+ score+" из "+ totalQuestion_optic);
+        builder.setPositiveButton("Выйти", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                exit();
+            }
+        });
+        builder.setNegativeButton("Перезапустить", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                restartQuiz();
+                dialog.cancel();
+            }
+        });
+        AlertDialog alert = builder.create();
+        alert.show();
     }
 
     void loadNewQuestion(){
@@ -114,13 +119,16 @@ public class TestOpticFragment extends Fragment  implements View.OnClickListener
         loadNewQuestion();
     }
 
+    void exit(){
+        Intent intent = new Intent(getActivity(), MainActivity.class);
+        startActivity(intent);
+    }
+
 
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-
         View view =  inflater.inflate(R.layout.fragment_test_optic, container, false);
 
         totalQuestionsTextView_optic = view.findViewById(R.id.total_questionoptic);
@@ -136,9 +144,7 @@ public class TestOpticFragment extends Fragment  implements View.OnClickListener
         submitBtn_optic.setOnClickListener(this);
 
         totalQuestionsTextView_optic.setText("Заданий : "+totalQuestion_optic);
-
         loadNewQuestion();
-
         return view;
     }
 }
