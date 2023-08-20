@@ -60,9 +60,7 @@ public class OpticFragment extends Fragment  {
 
 
     public static OpticFragment newInstance() {
-        OpticFragment fragment = new OpticFragment();
-
-        return fragment;
+        return new OpticFragment();
     }
     private ArrayList<WeatherItem> generateData() {
         ArrayList<WeatherItem> list = new ArrayList<>();
