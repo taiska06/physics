@@ -10,7 +10,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.physics.Adapter.MyAdapterMexanic;
-import com.example.physics.Adapter.MyAdapterTermodinamic;
 import com.example.physics.R;
 
 import java.util.ArrayList;
@@ -18,7 +17,7 @@ import java.util.ArrayList;
 
 public class MexanicFragment extends Fragment {
 
-    private final String image_names[] = {
+    private final String text[] = {
             "Механическое движение – изменение положения тела в пространстве с течением времени относительно других тел.\n"+
             "Траектория – любая линия движения тела. Путь S (м) – длина траектории.\n" +
                     "Перемещение S (м) – вектор, соединяющий начальное и конечное положение тела.\n" +
@@ -85,8 +84,8 @@ public class MexanicFragment extends Fragment {
 
     private ArrayList<MexanicFragment.WeatherItem> generateData() {
         ArrayList<MexanicFragment.WeatherItem> list = new ArrayList<>();
-        for(int i=0;i<image_names.length;i++) {
-            list.add(new WeatherItem(image_names[i],image_urls[i]));
+        for(int i = 0; i< text.length; i++) {
+            list.add(new WeatherItem(text[i],image_urls[i]));
         }
         return list;
     }

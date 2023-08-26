@@ -80,12 +80,8 @@ public class NotesListAdapter extends RecyclerView.Adapter<NotesViewHolder >{
 
       colorCode.add(R.color.palitra_1_7);
       colorCode.add(R.color.palitra_1_8);
-      colorCode.add(R.color.palitra_1_9);
       colorCode.add(R.color.palitra_1_10);
-      colorCode.add(R.color.palitra_1_11);
-      colorCode.add(R.color.palitra_1_12);
-      colorCode.add(R.color.palitra_1_13);
-      colorCode.add(R.color.palitra_1_14);
+
 
       Random random = new Random();
       int random_color = random.nextInt(colorCode.size());

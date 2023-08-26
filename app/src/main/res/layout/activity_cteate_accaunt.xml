@@ -23,7 +23,7 @@
             android:id="@+id/hi"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Регистрация"
+            android:text="@string/registr"
             android:gravity="center"
             android:textSize="18sp"
             android:textColor="@color/black"
@@ -43,7 +43,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/round"
         android:gravity="center"
-        android:hint="Email"
+        android:hint="@string/email"
         android:textSize="18sp"
         android:padding="16dp"
         android:layout_marginTop="35dp" />
@@ -54,7 +54,7 @@
             android:background="@drawable/round"
             android:gravity="center"
             android:inputType="textPassword"
-            android:hint="Password"
+            android:hint="@string/password"
             android:textSize="18sp"
             android:padding="16dp"
             android:layout_marginTop="12dp"/>
@@ -65,7 +65,7 @@
             android:background="@drawable/round"
             android:gravity="center"
             android:inputType="textPassword"
-            android:hint="Confirm Password"
+            android:hint="@string/confirm_password"
             android:textSize="18sp"
             android:padding="16dp"
             android:layout_marginTop="12dp"/>
@@ -74,7 +74,7 @@
             android:id="@+id/account_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Create account"
+            android:text="@string/create_account"
             android:backgroundTint="@color/palitra_1.4"
             app:cornerRadius="10dp"
             android:textSize="16sp"
@@ -91,13 +91,12 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/avatar"
         android:orientation="horizontal">
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already have an account?"
+            android:text="@string/already_have_an_account"
             android:textSize="16sp"
             android:layout_marginTop="20dp"
             />
@@ -105,7 +104,7 @@
             android:id="@+id/login_activity_btn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
+            android:text="@string/login"
             android:textStyle="bold"
             android:textSize="16sp"
             app:cornerRadius="5dp"

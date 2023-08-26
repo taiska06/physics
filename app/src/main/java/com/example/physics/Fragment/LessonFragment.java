@@ -60,6 +60,7 @@ public class LessonFragment extends Fragment {
     }
 
     private void initializeUiComponent(View view) {
+
         Button btn = view.findViewById(R.id.btn);
         Button btn2 = view.findViewById(R.id.btn2);
         Button btn3 = view.findViewById(R.id.btn3);
@@ -230,22 +231,21 @@ public class LessonFragment extends Fragment {
     }
     private void openTestOpticFragment(){
         TestOpticFragment testOpticFragment= TestOpticFragment.newInstance();
-        ((MainActivity)requireActivity()).pushFragmentToStack(MainActivity.BACK_STACK_LESSON, testOpticFragment);
+
         requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerLesson, testOpticFragment).commit();
     }
     private void openTestMexanicFragment(){
         TestMexanicFragment testMexanicFragment = TestMexanicFragment.newInstance();
-        ((MainActivity)requireActivity()).pushFragmentToStack(MainActivity.BACK_STACK_LESSON, testMexanicFragment);
         requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerLesson, testMexanicFragment).commit();
     }
     private void openTestElectrodinamicFragment(){
        TestElectrodinamicFragment testElectrodinamicFragment = TestElectrodinamicFragment.newInstance();
-        ((MainActivity)requireActivity()).pushFragmentToStack(MainActivity.BACK_STACK_LESSON, testElectrodinamicFragment);
+
         requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerLesson, testElectrodinamicFragment).commit();
     }
     private void openTestTermodinamicFragment(){
         TestTermodinamicFragment testTermodinamicFragment=TestTermodinamicFragment.newInstance();
-        ((MainActivity)requireActivity()).pushFragmentToStack(MainActivity.BACK_STACK_LESSON,testTermodinamicFragment);
+
         requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerLesson, testTermodinamicFragment).commit();
     }
 }

@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name"></string>
+    <string name="app_name">Physics</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="tema">Материал</string>
@@ -10,4 +10,28 @@
     <string name="text_2">опрос</string>
     <string name="text_3">опрос</string>
     <string name="text_4">опрос</string>
+    <string name="registr">Регистрация</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="create_account">Create account</string>
+    <string name="already_have_an_account">Already have an account?</string>
+    <string name="login">Login</string>
+    <string name="help1">Забыли пароль?</string>
+    <string name="help2">Мы отправим письмо на почту!</string>
+    <string name="send">SEND</string>
+    <string name="remember_everything">Remember everything?</string>
+    <string name="hello">Здравствуйте!</string>
+    <string name="forgot_password">Forgot password?</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="reate">Сreate</string>
+    <string name="title">Title:</string>
+    <string name="add_notes">Add notes:</string>
+    <string name="loading">Loading. . .</string>
+    <string name="test_and">Темы и тесты</string>
+    <string name="optic">Оптика</string>
+    <string name="mexanic">Механика</string>
+    <string name="electromexanic">Электродинамика</string>
+    <string name="termodinamic">Термодинамика</string>
+    <string name="video">Видеоматериал</string>
 </resources>

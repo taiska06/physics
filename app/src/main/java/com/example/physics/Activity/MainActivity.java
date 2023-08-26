@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void initializeUiComponent() {
         RecyclerView rcyBottomnavigation = findViewById(R.id.rcyBottomNavigation);
-        rcyBottomnavigation.setLayoutManager(new GridLayoutManager(this,3));
+        rcyBottomnavigation.setLayoutManager(new GridLayoutManager(this,3));//количество пролетов
         recyclerBottomNavigationAdapter=new RecyclerBottomNavigationAdapter(bottomNavigationModels, this, new OnBottomNavigationItemListener() {
             @Override
             public void onItemClicked(int position) {
