@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -24,6 +25,7 @@ import com.example.physics.Test.TestElectrodinamicFragment;
 import com.example.physics.Test.TestMexanicFragment;
 import com.example.physics.Test.TestOpticFragment;
 import com.example.physics.Test.TestTermodinamicFragment;
+import com.example.physics.Video_OpticFragment;
 
 
 public class LessonFragment extends Fragment {
@@ -65,6 +67,16 @@ public class LessonFragment extends Fragment {
         Button btn2 = view.findViewById(R.id.btn2);
         Button btn3 = view.findViewById(R.id.btn3);
         Button btn4 = view.findViewById(R.id.btn4);
+
+        TextView optic = view.findViewById(R.id.video_optic);
+
+        optic.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openOpticVideo();
+            }
+        });
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -92,6 +104,7 @@ public class LessonFragment extends Fragment {
             }
         });
 }
+
 
 
     private void showOptic(){
@@ -248,4 +261,12 @@ public class LessonFragment extends Fragment {
 
         requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerLesson, testTermodinamicFragment).commit();
     }
+
+    private void openOpticVideo() {
+        Video_OpticFragment video_opticFragment = Video_OpticFragment.newInstance();
+        ((MainActivity)requireActivity()).pushFragmentToStack(MainActivity.BACK_STACK_LESSON,video_opticFragment);
+        requireActivity().getSupportFragmentManager().beginTransaction().replace(R.id.containerLesson,video_opticFragment).commit();
+
+    }
+
 }
