@@ -1,4 +1,4 @@
-package com.example.physics;
+package com.example.physics.Video;
 
 public class Video {
     private String videoUrl, title, desc;

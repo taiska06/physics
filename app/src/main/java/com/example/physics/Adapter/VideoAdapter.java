@@ -1,4 +1,4 @@
-package com.example.physics;
+package com.example.physics.Adapter;
 
 
 import android.media.MediaPlayer;
@@ -10,6 +10,9 @@ import android.widget.VideoView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.physics.R;
+import com.example.physics.Video.Video;
 
 import java.util.List;
 

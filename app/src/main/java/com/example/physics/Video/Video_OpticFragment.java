@@ -1,4 +1,4 @@
-package com.example.physics;
+package com.example.physics.Video;
 
 import android.os.Bundle;
 
@@ -8,6 +8,9 @@ import androidx.viewpager2.widget.ViewPager2;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.example.physics.R;
+import com.example.physics.Adapter.VideoAdapter;
 
 import java.util.ArrayList;
 import java.util.List;

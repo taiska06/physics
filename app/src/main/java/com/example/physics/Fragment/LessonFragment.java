@@ -25,7 +25,7 @@ import com.example.physics.Test.TestElectrodinamicFragment;
 import com.example.physics.Test.TestMexanicFragment;
 import com.example.physics.Test.TestOpticFragment;
 import com.example.physics.Test.TestTermodinamicFragment;
-import com.example.physics.Video_OpticFragment;
+import com.example.physics.Video.Video_OpticFragment;
 
 
 public class LessonFragment extends Fragment {
