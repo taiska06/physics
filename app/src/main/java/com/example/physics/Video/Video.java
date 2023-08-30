@@ -1,17 +1,21 @@
 package com.example.physics.Video;
 
+import java.io.File;
+
 public class Video {
-    private String videoUrl, title, desc;
+    private File videoUrl;
+    private String title;
+    private String desc;
 
 
-    public Video(String videoUrl, String title, String desc){
+    public Video(File videoUrl, String title, String desc){
         this.videoUrl=videoUrl;
         this.title=title;
         this.desc=desc;
     }
 
     public String getVideoUrl() {
-        return videoUrl;
+        return String.valueOf(videoUrl);
     }
 
     public String getTitle() {
@@ -22,3 +26,4 @@ public class Video {
         return desc;
     }
 }
+
